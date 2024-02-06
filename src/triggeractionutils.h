@@ -25,11 +25,17 @@ namespace nap
             const APIArgument* base_arg = nullptr;
 
             // Find argument with name
-            auto args_it = std::find_if(args.begin(), args.end(), [&argName](const auto& arg)
+            bool found_name = false;
+            for(const auto& arg : args)
             {
-                return arg->getName()==argName;
-            });
-            if(!errorState.check(args_it!=args.end(), "Cannot find argument with name %s", argName.c_str()))
+                if(arg->getName()==argName)
+                {
+                    found_name = true;
+                    base_arg = arg;
+                    break;
+                }
+            }
+            if(!errorState.check(found_name, "Cannot find argument with name %s", argName.c_str()))
                 return false;
 
             // Check if argument has the correct type
