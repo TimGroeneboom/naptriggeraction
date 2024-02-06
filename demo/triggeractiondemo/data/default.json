@@ -1,0 +1,490 @@
+{
+    "Objects": [
+        {
+            "Type": "nap::Entity",
+            "mID": "TriggerEntity",
+            "Components": [
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "UDPTrigger",
+                    "Triggers": [{
+                        "Type": "nap::UDPTrigger",
+                        "mID": "UDPTrigger_3d4b9ef2",
+                        "Arguments": [
+                            {
+                                "Type": "nap::TriggerArgumentBool",
+                                "mID": "TriggerArgumentBool_64410fd0",
+                                "Name": "bool",
+                                "Value": true
+                            }
+                        ],
+                        "Server": "UDPServer",
+                        "Message": "trigger"
+                    }],
+                    "Actions": [
+                        "LogMessageAction",
+                        "SetParameterBoolAction"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "PlayButtonTrigger",
+                    "Triggers": [{
+                        "Type": "nap::ParameterButtonTrigger",
+                        "mID": "ParameterButtonTrigger_6faf0b5d",
+                        "Arguments": [],
+                        "Button": "ParameterButton"
+                    }],
+                    "Actions": [
+                        "SequencePlayAction"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "DropdownTrigger",
+                    "Triggers":[{
+                        "Type": "nap::ParameterDropdownTrigger",
+                        "mID": "ParameterDropdownTrigger_75d2da2f",
+                        "Arguments": [],
+                        "Dropdown": "ParameterDropDown",
+                        "IndexArgumentName": "DropdownSelectionIndex",
+                        "SelectionArgumentName": "DropdownSelection"
+                    }],
+                    "Actions": [
+                        "SetParameterSelection"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "CalenderTrigger",
+                    "Triggers": [{
+                        "Type": "nap::CalendarEventTrigger",
+                        "mID": "CalendarEventTrigger_085eb700",
+                        "Arguments": [],
+                        "Calendar": "OperationalCalendar",
+                        "TriggerType": "Trigger On Operational"
+                    }],
+                    "Actions": [
+                        "LogMessageFromCalendarEventAction"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "SequencePlayerChangeSpeed",
+                    "Triggers": [{
+                        "Type": "nap::SequenceEventTriggerString",
+                        "mID": "SequenceEventTriggerString_0f22091b",
+                        "Arguments": [
+                            {
+                                "Type": "nap::TriggerArgumentFloat",
+                                "mID": "TriggerArgumentFloat_e3c0ca5c",
+                                "Name": "playback_speed",
+                                "Value": 0.5
+                            }
+                        ],
+                        "Output": "SequencePlayerEventOutput_49541b8b",
+                        "TriggerValue": "change_speed"
+                    }],
+                    "Actions": [
+                        "SequenceSetPlaybackSpeedAction_0a91ee49"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "SequencePlayerRewindTrigger",
+                    "Triggers": [{
+                        "Type": "nap::SequenceEventTriggerString",
+                        "mID": "SequenceEventTriggerString_b7ce6f57",
+                        "Arguments": [],
+                        "Output": "SequencePlayerEventOutput_49541b8b",
+                        "TriggerValue": "rewind"
+                    }],
+                    "Actions": [
+                        "SequenceRewindAction"
+                    ],
+                    "Verbose": false
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "ConditionalFloatTrigger",
+                    "Triggers": [{
+                        "Type": "nap::ConditionalTriggerFloat",
+                        "mID": "ConditionalTriggerFloat_5c4952b1",
+                        "Arguments": [
+                            {
+                                "Type": "nap::TriggerArgumentString",
+                                "mID": "TriggerArgumentString_dc083635",
+                                "Name": "string",
+                                "Value": "Threshold exceeded!"
+                            }
+                        ],
+                        "Parameter": "ParameterFloat",
+                        "TriggerValue": 50.0,
+                        "Condition": "Greater"
+                    }],
+                    "Actions": [
+                        "SetParameterStringAction"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "SequenceEventSetBoolTrigger1",
+                    "Triggers": [{
+                        "Type": "nap::SequenceEventTriggerString",
+                        "mID": "SequenceEventTriggerString_77ef9f18",
+                        "Arguments": [
+                            {
+                                "Type": "nap::TriggerArgumentBool",
+                                "mID": "TriggerArgumentBool_eab80db7",
+                                "Name": "bool",
+                                "Value": true
+                            }
+                        ],
+                        "Output": "SequencePlayerEventOutput_49541b8b",
+                        "TriggerValue": "toggle_checkbox"
+                    }],
+                    "Actions": [
+                        "SetParameterBoolActionSequence1"
+                    ],
+                    "Verbose": true
+                },
+                {
+                    "Type": "nap::TriggerHandlerComponent",
+                    "mID": "SequenceEventSetBoolTrigger2",
+                    "Triggers": [{
+                        "Type": "nap::SequenceEventTriggerString",
+                        "mID": "SequenceEventTriggerString_517f3f25",
+                        "Arguments": [
+                            {
+                                "Type": "nap::TriggerArgumentBool",
+                                "mID": "TriggerArgumentBool_d03f26ff",
+                                "Name": "bool",
+                                "Value": false
+                            }
+                        ],
+                        "Output": "SequencePlayerEventOutput_49541b8b",
+                        "TriggerValue": "untoggle_checkbox"
+                    }],
+                    "Actions": [
+                        "SetParameterBoolActionSequence2"
+                    ],
+                    "Verbose": true
+                }
+            ],
+            "Children": []
+        },
+        {
+            "Type": "nap::GnomonMesh",
+            "mID": "Gnomon",
+            "Size": 1.0,
+            "Position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "Type": "nap::OperationalCalendar",
+            "mID": "OperationalCalendar",
+            "AllowLoadFailure": true,
+            "Monday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 8,
+                    "Minute": 0
+                }
+            },
+            "Tuesday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 0,
+                    "Minute": 0
+                }
+            },
+            "Wednesday": {
+                "Time": {
+                    "Hour": 9,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 8,
+                    "Minute": 0
+                }
+            },
+            "Thursday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 8,
+                    "Minute": 0
+                }
+            },
+            "Friday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 0,
+                    "Minute": 0
+                }
+            },
+            "Saturday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 0,
+                    "Minute": 0
+                }
+            },
+            "Sunday": {
+                "Time": {
+                    "Hour": 0,
+                    "Minute": 0
+                },
+                "Duration": {
+                    "Hour": 0,
+                    "Minute": 0
+                }
+            }
+        },
+        {
+            "Type": "nap::ParameterGUI",
+            "mID": "ParameterGUI",
+            "Serializable": false,
+            "Group": "ParameterGroup"
+        },
+        {
+            "Type": "nap::ParameterGroup",
+            "mID": "ParameterGroup",
+            "Parameters": [
+                {
+                    "Type": "nap::ParameterBool",
+                    "mID": "ParameterBool",
+                    "Name": "Bool Set From UDPTrigger",
+                    "Value": false
+                },
+                {
+                    "Type": "nap::ParameterFloat",
+                    "mID": "ParameterFloat",
+                    "Name": "My Float Parameter",
+                    "Value": 0.0,
+                    "Minimum": 0.0,
+                    "Maximum": 100.0
+                },
+                {
+                    "Type": "nap::ParameterString",
+                    "mID": "ParameterStringConditional",
+                    "Name": "Set from conditional",
+                    "Value": ""
+                },
+                {
+                    "Type": "nap::ParameterBool",
+                    "mID": "ParameterBoolSequenceEvent",
+                    "Name": "Bool Set From Sequence",
+                    "Value": false
+                },
+                {
+                    "Type": "nap::ParameterButton",
+                    "mID": "ParameterButton",
+                    "Name": "Play Sequencer"
+                },
+                {
+                    "Type": "nap::ParameterDropDown",
+                    "mID": "ParameterDropDown",
+                    "Name": "DropDown",
+                    "Items": [
+                        "Apples",
+                        "Oranges",
+                        "Bananas",
+                        "Melons",
+                        "Grapes"
+                    ],
+                    "SelectedIndex": 0
+                },
+                {
+                    "Type": "nap::ParameterString",
+                    "mID": "ParameterStringDropDownSelection",
+                    "Name": "Selection",
+                    "Value": ""
+                }
+            ],
+            "Groups": []
+        },
+        {
+            "Type": "nap::RenderWindow",
+            "mID": "Window",
+            "Borderless": false,
+            "Resizable": true,
+            "Visible": true,
+            "SampleShading": true,
+            "Title": "Example Window",
+            "Width": 1280,
+            "Height": 720,
+            "Mode": "Immediate",
+            "ClearColor": {
+                "Values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            "Samples": "Four",
+            "AdditionalSwapImages": 1,
+            "RestoreSize": true,
+            "RestorePosition": true
+        },
+        {
+            "Type": "nap::ResourceGroup",
+            "mID": "SequencerGroup",
+            "Members": [
+                {
+                    "Type": "nap::SequenceEditor",
+                    "mID": "SequenceEditor",
+                    "Sequence Player": "SequencePlayer"
+                },
+                {
+                    "Type": "nap::SequencePlayer",
+                    "mID": "SequencePlayer",
+                    "Default Show": "default.json",
+                    "Outputs": [
+                        {
+                            "Type": "nap::SequencePlayerEventOutput",
+                            "mID": "SequencePlayerEventOutput_49541b8b"
+                        }
+                    ],
+                    "Clock": {
+                        "Type": "nap::SequencePlayerStandardClock",
+                        "mID": "SequencePlayerStandardClock_2054d25b"
+                    }
+                },
+                {
+                    "Type": "nap::SequenceEditorGUI",
+                    "mID": "SequenceEditorGUI",
+                    "Sequence Editor": "SequenceEditor",
+                    "Render Window": "Window",
+                    "Draw Full Window": false,
+                    "Hide Marker Labels": false
+                }
+            ],
+            "Children": []
+        },
+        {
+            "Type": "nap::Scene",
+            "mID": "Scene",
+            "Entities": [
+                {
+                    "Entity": "TriggerEntity",
+                    "InstanceProperties": []
+                }
+            ]
+        },
+        {
+            "Type": "nap::TriggerActionGroup",
+            "mID": "ActionGroup",
+            "TriggerActions": [
+                {
+                    "Type": "nap::TriggerLogAction",
+                    "mID": "LogMessageAction",
+                    "LogMessage": "Hello World!"
+                },
+                {
+                    "Type": "nap::SetParameterBoolAction",
+                    "mID": "SetParameterBoolAction",
+                    "Parameter": "ParameterBool",
+                    "ArgumentName": "bool"
+                },
+                {
+                    "Type": "nap::SequenceAction",
+                    "mID": "SequencePlayAction",
+                    "ActionType": "Play",
+                    "SequencePlayer": "SequencePlayer"
+                },
+                {
+                    "Type": "nap::SetParameterStringAction",
+                    "mID": "SetParameterSelection",
+                    "Parameter": "ParameterStringDropDownSelection",
+                    "ArgumentName": "DropdownSelection"
+                },
+                {
+                    "Type": "nap::TriggerLogAction",
+                    "mID": "LogMessageFromCalendarEventAction",
+                    "LogMessage": "Calendar went operational!"
+                },
+                {
+                    "Type": "nap::SequenceSetPlaybackSpeedAction",
+                    "mID": "SequenceSetPlaybackSpeedAction_0a91ee49",
+                    "FloatArgName": "playback_speed",
+                    "SequencePlayer": "SequencePlayer"
+                },
+                {
+                    "Type": "nap::SequenceAction",
+                    "mID": "SequenceRewindAction",
+                    "ActionType": "Rewind",
+                    "SequencePlayer": "SequencePlayer"
+                },
+                {
+                    "Type": "nap::SetParameterStringAction",
+                    "mID": "SetParameterStringAction",
+                    "Parameter": "ParameterStringConditional",
+                    "ArgumentName": "string"
+                },
+                {
+                    "Type": "nap::SetParameterBoolAction",
+                    "mID": "SetParameterBoolActionSequence1",
+                    "Parameter": "ParameterBoolSequenceEvent",
+                    "ArgumentName": "bool"
+                },
+                {
+                    "Type": "nap::SetParameterBoolAction",
+                    "mID": "SetParameterBoolActionSequence2",
+                    "Parameter": "ParameterBoolSequenceEvent",
+                    "ArgumentName": "bool"
+                }
+            ],
+            "Groups": []
+        },
+        {
+            "Type": "nap::UDPClient",
+            "mID": "UDPClient",
+            "Thread": "UDPThread",
+            "AllowFailure": false,
+            "Endpoint": "localhost",
+            "Broadcast": false,
+            "Port": 13251,
+            "MaxQueueSize": 1000,
+            "StopOnMaxQueueSizeExceeded": true
+        },
+        {
+            "Type": "nap::UDPServer",
+            "mID": "UDPServer",
+            "Thread": "UDPThread",
+            "AllowFailure": false,
+            "Port": 13251,
+            "IP Address": "",
+            "Multicast Groups": []
+        },
+        {
+            "Type": "nap::UDPThread",
+            "mID": "UDPThread",
+            "Update Method": "Spawn Own Thread"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "Type": "nap::ModuleInfo", 
+    "mID": "naptriggeraction", 
+    "RequiredModules": [
+        "napudp",
+        "napsequence",
+        "napparameter",
+        "napapi",
+        "napcalendar"
+    ], 
+    "WindowsDllSearchPaths": []
+}

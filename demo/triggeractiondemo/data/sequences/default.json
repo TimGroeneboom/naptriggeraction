@@ -1,0 +1,53 @@
+{
+    "Objects": [
+        {
+            "Type": "nap::Sequence",
+            "mID": "Generated",
+            "Sequence Tracks": [
+                {
+                    "Type": "nap::SequenceTrackEvent",
+                    "mID": "Generated_2",
+                    "Segments": [
+                        {
+                            "Type": "nap::SequenceTrackSegmentEventString",
+                            "mID": "Generated_3",
+                            "Label": "default",
+                            "Start Time": 4.994941014796495,
+                            "Duration": 0.0,
+                            "Value": "rewind"
+                        },
+                        {
+                            "Type": "nap::SequenceTrackSegmentEventString",
+                            "mID": "Generated_4",
+                            "Label": "default",
+                            "Start Time": 2.2930512111634018,
+                            "Duration": 0.0,
+                            "Value": "change_speed"
+                        },
+                        {
+                            "Type": "nap::SequenceTrackSegmentEventString",
+                            "mID": "Generated_5",
+                            "Label": "default",
+                            "Start Time": 0.8087893724441528,
+                            "Duration": 0.0,
+                            "Value": "toggle_checkbox"
+                        },
+                        {
+                            "Type": "nap::SequenceTrackSegmentEventString",
+                            "mID": "Generated_6",
+                            "Label": "default",
+                            "Start Time": 3.5462303161621095,
+                            "Duration": 0.0,
+                            "Value": "untoggle_checkbox"
+                        }
+                    ],
+                    "Output ID": "SequencePlayerEventOutput_49541b8b",
+                    "Name": "",
+                    "Height": 200.0
+                }
+            ],
+            "Sequence Markers": [],
+            "Duration": 6.501545492559671
+        }
+    ]
+}
