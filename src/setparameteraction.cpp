@@ -1,0 +1,11 @@
+#include "setparameteraction.h"
+
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterBoolAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterFloatAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterIntAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterLongAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterDoubleAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterStringAction)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterVec2Action)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterVec3Action)
+DEFINE_TRIGGERPARAMETERACTION(nap::SetParameterVec4Action)

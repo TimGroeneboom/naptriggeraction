@@ -1,0 +1,16 @@
+#include "sequenceeventtrigger.h"
+#include "triggerhandlercomponent.h"
+
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerString)
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerFloat)
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerInt)
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerVec2)
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerVec3)
+DEFINE_SEQUENCEEVENTTRIGGER(nap::SequenceEventTriggerVec4)
+
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerStringInstance)
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerFloatInstance)
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerIntInstance)
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerVec2Instance)
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerVec3Instance)
+DEFINE_SEQUENCEEVENTTRIGGERINSTANCE(nap::SequenceEventTriggerVec4Instance)

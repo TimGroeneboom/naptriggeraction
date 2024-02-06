@@ -1,0 +1,17 @@
+{
+    "Type": "nap::ProjectInfo",
+    "mID": "ProjectInfo",
+    "Title": "TriggerActionDemo",
+    "Version": "1.0.0",
+    "RequiredModules": [
+        "napapp",
+        "napudp",
+        "naptriggeraction",
+        "napparametergui",
+        "napsequence",
+        "napsequencegui"
+    ],
+    "Data": "data/default.json",
+    "ServiceConfig": "",
+    "PathMapping": "cache/path_mapping.json"
+}
